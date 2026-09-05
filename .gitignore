@@ -1,0 +1,6 @@
+# Local database dumps and exports can be large or contain data that should not be committed.
+*.sql.gz
+*.dump
+*.bak
+.env
+
