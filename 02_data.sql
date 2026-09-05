@@ -1,0 +1,24 @@
+-- SwiftBite Analytics: source data import area
+--
+-- The uploaded exercise contained only the 60 questions/queries. It did NOT
+-- include the original INSERT statements, CSV files, or a database export.
+-- No replacement rows have been invented here, so running this project will
+-- not produce fabricated results.
+--
+-- To use Ravi's existing SwiftBite_Analytics database data, export it from
+-- MySQL and place the INSERT statements below (or load CSV data after running
+-- 01_schema.sql). Keep the table load order shown here so foreign keys work.
+--
+-- 1. customers
+-- 2. restaurants
+-- 3. delivery_agents
+-- 4. menu_items
+-- 5. orders
+-- 6. order_items
+-- 7. deliveries
+-- 8. reviews
+--
+-- Example only (do not treat as original exercise data):
+-- INSERT INTO customers (customer_id, customer_name, city, age, signup_date, membership_tier)
+-- VALUES (1, 'Example Student', 'Bangalore', 20, '2024-01-01', 'Basic');
+
