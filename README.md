@@ -1,34 +1,65 @@
-# SwiftBite SQL Practice
+# SwiftBite Analytics — SQL Portfolio Project
 
-This is my SQL practice project based on a food-delivery analytics dataset called **SwiftBite Analytics**. I made it while learning how to write queries from basic filtering up to joins, subqueries, CTEs and window functions.
+A MySQL 8.0 analytics project for a fictional food-delivery platform. It models customers, restaurants, menus, orders, deliveries, and reviews, then answers 60 business questions ranging from basic filtering to KPI reporting with CTEs and window functions.
 
-The exercise has 60 questions. The focus is on finding useful business information such as revenue by city, popular menu items, delivery performance, repeat customers and monthly growth.
+> This repository focuses on SQL analysis and data modelling. It intentionally does not publish invented data or fabricated business results.
 
-## Files
+## What this project demonstrates
 
-- `01_schema.sql` — MySQL 8.0 table structure based on the columns used in the exercise.
-- `02_data.sql` — place for the original data import. The source file did not include the database rows, so I left this honest instead of making up results.
-- `03_solutions.sql` — all 60 practice queries, kept in their original question order.
+- Designing a relational schema with primary keys, foreign keys, checks, and targeted indexes
+- Writing clear SQL for customer, restaurant, delivery, and revenue analysis
+- Using joins, subqueries, conditional aggregation, CTEs, and window functions
+- Defining business metrics such as cancellation rate, repeat-customer rate, on-time delivery rate, and month-over-month revenue growth
+- Documenting assumptions and keeping analysis reproducible
 
-## How I would run it
+## Tech stack
 
-1. Open MySQL Workbench or another MySQL 8.0 client.
-2. Run `01_schema.sql` to create the `SwiftBite_Analytics` database and tables.
-3. Add the real project data in `02_data.sql`, then run it.
-4. Run individual questions from `03_solutions.sql`. The file already starts with `USE SwiftBite_Analytics;`.
+- **Database:** MySQL 8.0+
+- **SQL features:** CTEs, window functions, `DATE_FORMAT`, `TIMESTAMPDIFF`, conditional aggregation, and ranking functions
 
-## Notes
+## Repository structure
 
-I wrote the schema from the fields referenced by the exercise because the uploaded file only had questions and queries. I did not execute these queries in this repository: no MySQL server/database export was available in this workspace. That means this project deliberately does not claim any query output or KPI numbers.
+| File | Purpose |
+| --- | --- |
+| `01_schema.sql` | Creates the `SwiftBite_Analytics` database, tables, relationships, and indexes |
+| `02_data.sql` | Clearly documented place to load a compatible dataset |
+| `03_solutions.sql` | 60 analytical SQL queries, ordered from beginner to advanced |
 
-The solutions use MySQL syntax such as `DATE_FORMAT`, `DAYOFWEEK`, `TIMESTAMPDIFF`, CTEs and window functions, so MySQL 8.0+ is recommended.
+## Business questions answered
 
-## Topics I practised
+The query set explores areas such as:
 
-- `SELECT`, `WHERE`, `ORDER BY` and `LIMIT`
-- `GROUP BY`, `HAVING` and aggregate functions
-- joins and missing-data checks with `LEFT JOIN`
-- `CASE WHEN` categories and pivot-style counts
-- subqueries, date/time functions, CTEs and window functions
-- basic food-delivery business KPIs
+- Restaurant performance, cuisine mix, ratings, and revenue
+- Customer value, membership tiers, repeat behaviour, and lifecycle spend
+- Order volume, cancellation patterns, promotion effectiveness, and payment usage
+- Delivery speed, on-time rate, agent performance, and tips
+- Time-based trends including peak hours, monthly revenue, and month-over-month growth
+- KPI snapshots suitable for a food-delivery operations dashboard
 
+## Getting started
+
+1. Open MySQL Workbench or another MySQL 8.0-compatible client.
+2. Run `01_schema.sql` to create the database and tables.
+3. Load data that matches the schema using `02_data.sql` or your preferred import method.
+4. Run individual queries from `03_solutions.sql`.
+
+> **Note:** `01_schema.sql` begins with `DROP DATABASE IF EXISTS SwiftBite_Analytics`. Use it only when you are comfortable replacing a database with that name.
+
+## Data note
+
+The original exercise material contained questions and queries but not the source rows, CSVs, or a database export. Rather than inventing records or presenting fictional KPIs as real results, this project leaves a documented import point for a compatible dataset. This keeps the portfolio work transparent and easy to extend.
+
+## Query progression
+
+| Level | Focus |
+| --- | --- |
+| Beginner | `SELECT`, `WHERE`, sorting, limits |
+| Intermediate | Aggregations, `GROUP BY`, `HAVING` |
+| Joins | Cross-table order, customer, restaurant, and delivery analysis |
+| Advanced | `CASE`, subqueries, date/time functions |
+| Analytics | CTEs, window functions, rankings, running totals |
+| KPIs | Revenue, retention, promotion, and delivery-health metrics |
+
+## Author
+
+Ravi — aspiring data/business analyst building practical SQL and dashboard projects.
